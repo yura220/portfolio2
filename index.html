@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>디자인플러스 | Design+</title>
+
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/title.css">
+  <link rel="stylesheet" href="css/specialist.css">
+  <!-- 구글폰트 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+  <script src="js/jquery-3.7.1.js"></script>
+
+  <!-- Specialist slick.js -->
+  <link rel="stylesheet" type="text/css" href="js/slick/slick.css" />
+  <link rel="stylesheet" type="text/css" href="js/slick/slick-theme.css" />
+  <!-- <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script> -->
+  <script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script type="text/javascript" src="js/slick/slick.min.js"></script>
+  <script>
+    // 슬릭-------------------------------
+    $(document).ready(function () {
+      $('.slick_slider').slick({
+        slidesToScroll: 1,        // 한 번에 1개씩 이동
+        autoplay: true,           // 자동 재생
+        autoplaySpeed: 0,         // 대기 없이 바로 다음 슬라이드
+        speed: 5000,              // 이동 속도 (천천히)
+        cssEase: 'linear',        // 일정한 속도
+        infinite: true,           // 무한 반복
+        arrows: false,            // 좌우 버튼 숨김
+        dots: false,              // 도트 네비 숨김
+        pauseOnHover: false,      // 마우스 올려도 계속 재생
+        pauseOnFocus: false,      // 포커스 돼도 멈추지 않음
+        variableWidth: true,      // 슬라이드마다 너비 다르게 설정 가능
+      });
+
+    });
+  </script>
+</head>
+
+<body>
+  <!-- 상단 -->
+  <header id="haeder" class="golos">
+    <hr>
+    <div class="wrap">
+      <nav class="grid">
+        <h1><a href=""><img src="img/svg/logo.svg" alt="">Design+</a></h1>
+        <div class="gnb h4">
+          <div class="gnb_top">
+            <ul class="gnb_main">
+              <li><a class="gnb_t block golos" href="">Article</a></li>
+              <li><a class="gnb_t block golos" href="">D. find</a></li>
+              <li><a class="gnb_t block golos" href="">Young</a></li>
+            </ul>
+          </div>
+          <div class="gnb_bottom">
+            <ul class="gnb_b gnb_b0">
+              <li class="gnb_sub"><a class="block golos" href="">Project</a></li>
+              <li class="gnb_sub"><a class="block golos" href="">People</a></li>
+              <li class="gnb_sub"><a class="block golos" href="">Now</a></li>
+            </ul>
+            <ul class="gnb_b gnb_b1">
+              <li class="gnb_sub"><a class="block golos" href="">Specialist</a></li>
+              <li class="gnb_sub"><a class="block golos" href="">Focus 9</a></li>
+            </ul>
+            <ul class="gnb_b gnb_b2">
+              <li class="gnb_sub"><a class="block golos" href="">School Show</a></li>
+              <li class="gnb_sub"><a class="block golos" href="">Meet</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="searchmenu">
+          <input type="text" placeholder="Search Design Insight">
+          <a class="search" href=""></a>
+        </div>
+        <div class="news m">
+          <div><a class="block" href="">Newsletter</a></div>
+          <div><a class="block" href="">Submission</a></div>
+        </div>
+        <div class="enb h4">
+          <a href="">+</a>
+          <ul class="enb_show">
+            <li><a class="block" href="">About</a></li>
+            <li><a class="block" href="">Subscription</a></li>
+            <li><a class="block" href="">E-Magazine</a></li>
+          </ul>
+        </div>
+        <div class="sns">
+          <ul>
+            <li><a class="block" href="">Utube</a></li>
+            <li><a class="block" href="">spotify</a></li>
+            <li><a class="block" href="">instagram</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <!-- 타이틀 -->
+  <div id="title">
+    <div class="wrap">
+      <div class="title_l"><a href="">
+          <img src="https://design.co.kr/wp-content/uploads/2025/04/20250402_095533-1500x848.jpg" alt="">
+          <div class="title_l_text white">
+            <h2 class="sm noto">밀러놀의 시작, 크랜브룩 커넥션</h2>
+            <p class="date sm">
+              <time datetime="">2025.04.01</time>
+            </p>
+          </div>
+        </a>
+      </div>
+      <div class="title_r">
+        <div class="imgbox imgbox1">
+          <a href="">
+            <img class="r_first" src="https://design.co.kr/wp-content/uploads/2025/03/20250312_051728.jpg" alt="">
+            <div class="title_r_text1 white">
+              <h3 class="sm"></h3>
+              <p class="date sm">
+                <time datetime=""></time>
+              </p>
+            </div>
+          </a>
+        </div>
+        <div class="imgbox imgbox2">
+          <a href="">
+            <img class="r_first"
+              src="https://design.co.kr/wp-content/uploads/2025/04/Ace-Hotel-Kyoto_Ace-Suite-1-1500x848.jpg" alt="">
+            <div class="title_r_text2 white">
+              <h3 class="sm">[위클리 디자인] 세계의 도시에서 하룻밤, 호텔이 된 역사와 디자인</h3>
+              <p class="date sm">
+                <time datetime="">2025.03.31</time>
+              </p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+    <hr>
+  </div>
+  <!-- 메인 -->
+  <section id="gallery"></section>
+  <section id="specialist">
+    <div class="wrap">
+      <div class="specialist_text">
+        <h2 class="h2 green">2025 Specialist</h2>
+        <p class="p "><a href="" class="green">View All Specialist</a></p>
+      </div>
+      <div class="block">
+        <div class="slick_slider">
+          <div class="slick_box box1"><a href=""></a>
+            <h3 class="sm">비밥</h3>
+          </div>
+          <div class="slick_box box2"><a href=""></a>
+            <h3 class="sm">세컨드화이트</h3>
+          </div>
+          <div class="slick_box box3"><a href=""></a>
+            <h3 class="sm">이스트 스튜디오</h3>
+          </div>
+          <div class="slick_box box4"><a href=""></a>
+            <h3 class="sm">니즈디자인랩</h3>
+          </div>
+          <div class="slick_box box5"><a href=""></a>
+            <h3 class="sm">더블디</h3>
+          </div>
+          <div class="slick_box box6"><a href=""></a>
+            <h3 class="sm">더브레드앤버터</h3>
+          </div>
+          <div class="slick_box box7"><a href=""></a>
+            <h3 class="sm">엘레멘트컴퍼니</h3>
+          </div>
+          <div class="slick_box box8"><a href=""></a>
+            <h3 class="sm">코브스튜디오</h3>
+          </div>
+          <div class="slick_box box9"><a href=""></a>
+            <h3 class="sm">네임드</h3>
+          </div>
+          <div class="slick_box box10"><a href=""></a>
+            <h3 class="sm">모임 별</h3>
+          </div>
+          <div class="slick_box box11"><a href=""></a>
+            <h3 class="sm">이온에스엘디</h3>
+          </div>
+          <div class="slick_box box12"><a href=""></a>
+            <h3 class="sm">디오리진</h3>
+          </div>
+          <div class="slick_box box13"><a href=""></a>
+            <h3 class="sm">하잎드</h3>
+          </div>
+          <div class="slick_box box14"><a href=""></a>
+            <h3 class="sm">YNL</h3>
+          </div>
+          <div class="slick_box box15"><a href=""></a>
+            <h3 class="sm">베이그</h3>
+          </div>
+          <div class="slick_box box16"><a href=""></a>
+            <h3 class="sm">리오랩</h3>
+          </div>
+          <div class="slick_box box17"><a href=""></a>
+            <h3 class="sm">헤즈</h3>
+          </div>
+          <div class="slick_box box18"><a href=""></a>
+            <h3 class="sm">푸른 이미지</h3>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </section>
+  <section id="focus"></section>
+  <section id="podcast"></section>
+  <!-- 푸터 -->
+  <footer></footer>
+</body>
+
+</html>
