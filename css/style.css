@@ -1,0 +1,234 @@
+/* 구글폰트 */
+.Noto{
+  font-family: "Noto Sans KR", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;}
+
+body{
+  font-family: "Noto Sans KR", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;}
+}
+
+.golos{
+  font-family: "Golos Text", sans-serif !important;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+/* 레이아웃 스타일링  */
+section{
+  height: 100vh;
+  /*! height: 800px; */
+}
+.wrap{
+  max-width: 1440px;
+  margin: 0 auto;
+  width: 100%;
+}
+.grid{
+  display: grid;
+}
+.flex{
+  display: flex;
+}
+.flex-between{
+  justify-content: space-between;
+}
+.flex-column{
+  display: flex;
+  flex-direction: column;
+}
+.flex-column-center{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  justify-content: center;
+}
+nav a{
+  display: block;
+}
+.block{
+  display: block;
+}
+
+/* 텍스트 스타일링 */
+.h1{
+  font-size:66px;
+  font-weight: bold;
+}
+.h2{
+  font-size:47px;
+}
+.h3{
+  font-size:35px;
+}
+.h4{
+  font-size:25px;
+}
+.h5{
+  font-size:20px;
+}
+.menu{
+  font-size:18px;
+}
+.submenu{
+  font-size:16px;
+}
+.titlep{
+  font-size:20px;
+}
+.p{
+  font-size:18px;
+}
+.m{
+   font-size:16px;
+}
+.sm{
+  font-size:14px;
+}
+.xs{
+  font-size:12px;
+}
+/* 칼라 */
+.green{
+  color:#99ff6a;
+}
+.black,.black a{
+  color: black !important;
+}
+.white,.white a{
+  color: #fff;
+}
+.gray{
+  color: #7b7b7b;
+}
+/* 아이콘 */
+.Lsicon::before{
+  content:"";
+  display: block;
+  width: 60px;
+  height: 25px;
+  background-image: url(../img/svg/lsicon.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+/* 버튼 */
+.btn16{
+ font-size:16px; 
+}
+.roundbtn{
+  width: fit-content;
+  padding: 0 20px;
+  border: 1px solid white;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  border-radius: 25px;
+  gap: 20px;
+}
+.roundbtn::after{
+  content:"";
+  background-image: url(../img/arrow_20.png);
+  width: 26px;
+  display: inline-block;
+  height: 26px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hide{
+  display: none !important;
+}
+
+.more{
+  border: 1px solid #fff;
+  line-height: 1;
+  padding: 17px 28px;
+  color:white;
+  transition: 0.5s;
+}
+.more:hover{
+  background-color: white;
+  color: #050505;
+}
+.more::after{
+  content: "+";
+  margin-left: 10px;
+  transition: 0.5s;
+  position: relative;
+  left: 0px;
+}
+.more:hover::after{
+  left: 10px;
+}
+
+/* 모바일반응형 768 */
+@media screen and (max-width:768px){
+  section {
+    height: calc(100vh - 100px);
+  }
+  .wraptitle:0 15px;
+  .wrap{
+   padding: 0 35px;
+  }
+  /* 텍스트 스타일링 */
+  .h1{
+    font-size:calc(66px * 0.404);
+    font-weight: 700;
+  }
+  .h2{
+    font-size:30px;
+    font-weight: 700;
+  }
+  .h3{
+    font-size:35px;
+    font-weight: 700;
+  }
+  .h4{
+    font-size:17px;
+    font-weight: 700;
+  }
+  .h5{
+    font-size:14px;
+    font-weight: 700;
+  }
+  .menu{
+    font-size:14px;
+    font-weight: 600;
+  }
+  .submenu{
+    font-size:16px;
+    font-weight: 600;
+  }
+  .titlep{
+    font-size:calc(20px * 0.404);
+    font-weight: 600;
+  }
+  .p{
+    font-size:16px;
+    font-weight: 500;
+  }
+  .m{
+     font-size:16px;
+  }
+  .sm{
+    font-size:13px;
+    font-weight: 600;
+  }
+  .xs{
+    font-size:11px;
+    font-weight: 600;
+  }
+}
+
+
+
+
+
+
+

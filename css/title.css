@@ -1,0 +1,163 @@
+#title {
+  height: 700px;
+  min-height: 500px;
+  box-sizing: border-box;
+  padding: 120px 0 40px 0;
+}
+
+#title .wrap {
+  display: grid;
+  height: 100%;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: 1fr 1fr;
+  gap: 20px;
+  padding-bottom: 40px;
+  width: 100%;
+}
+
+#title .title_l {
+  grid-column: 1 / span 4;
+  grid-row: 1 / span 2;
+  overflow: hidden;
+  position: relative;
+}
+
+#title .title_l img {
+  width: auto;
+  height: 100%;
+  border-radius: 20px;
+  display: block;
+  position: relative;
+  z-index: 0;
+}
+
+#title .title_l a::before {
+  content: "";
+  background-image: linear-gradient(to bottom, transparent 70%, rgb(0, 0, 0, 0.6) 100%);
+  display: block;
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  border-radius: 20px;
+}
+
+#title .title_l .title_l_text {
+  position: relative;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  font-weight: 600;
+}
+
+#title .title_l a {
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: relative;
+}
+
+#title .title_l h2 {
+  position: absolute;
+  bottom: 40px;
+  left: 20px;
+  font-weight: 600;
+}
+
+#title .title_l p {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+}
+
+#title .title_l time {}
+
+#title .title_r {
+  grid-column: 5 / span 2;
+  grid-row: 1 / span 2;
+  /*! overflow: hidden; */
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  gap: 20px;
+  /*! flex-direction: column; */
+  width: 100%;
+  height: 100%;
+}
+
+#title .imgbox {
+  width: 100%;
+  overflow: hidden;
+  height: 100%;
+  position: relative;
+}
+
+#title .imgbox1 {
+  grid-row: 1;
+}
+
+#title .imgbox2 {
+  grid-row: 2;
+}
+
+#title .title_r img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+#title img.r_first {}
+
+#title img.r_second {}
+
+#title .wrap div.white {
+  display: block;
+  bottom: 20px;
+  position: absolute;
+  z-index: 3;
+}
+
+#title .title_r_text1 {
+  /*! grid-row: 1; */
+  position: absolute;
+  bottom: 50px;
+}
+
+#title .title_r_text2 {
+  grid-row: 2;
+}
+
+#title .title_r a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+#title .title_r .imgbox a::before {
+  content: "";
+  background-image: linear-gradient(to bottom, transparent 70%, rgb(0, 0, 0, 0.6) 100%);
+  display: block;
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  border-radius: 20px;
+}
+
+#title .title_r a h3 {
+  padding: 0 20px 0 20px;
+}
+
+#title .title_r .date {
+  padding-left: 20px;
+}
+
+#title .title_r a time {}
+
+#title hr {
+  height: 1px;
+  border: none;
+  background-color: #0002;
+  width: 1440px;
+  margin: 0 auto;
+}

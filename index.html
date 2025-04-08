@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>디자인플러스 | Design+</title>
+
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/title.css">
+  <link rel="stylesheet" href="css/gallery.css">
+  <link rel="stylesheet" href="css/specialist.css">
+  <link rel="stylesheet" href="css/focus.css">
+  <!-- 구글폰트 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+  <script src="js/jquery-3.7.1.js"></script>
+
+  <!-- Specialist slick.js -->
+  <link rel="stylesheet" type="text/css" href="js/slick/slick.css" />
+  <link rel="stylesheet" type="text/css" href="js/slick/slick-theme.css" />
+  <!-- <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script> -->
+  <script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script type="text/javascript" src="js/slick/slick.min.js"></script>
+  <script>
+    // 슬릭-------------------------------
+    $(document).ready(function () {
+      $('.slick_slider').slick({
+        slidesToScroll: 1,        // 한 번에 1개씩 이동
+        autoplay: true,           // 자동 재생
+        autoplaySpeed: 0,         // 대기 없이 바로 다음 슬라이드
+        speed: 6000,              // 이동 속도
+        cssEase: 'linear',        // 일정한 속도
+        infinite: true,           // 무한 반복
+        arrows: false,            // 좌우 버튼 숨김
+        dots: false,              // 도트 네비 숨김
+        pauseOnHover: false,      // 마우스 올려도 계속 재생
+        pauseOnFocus: false,      // 포커스 돼도 멈추지 않음
+        variableWidth: true,      // 슬라이드마다 너비 다르게 설정 가능
+      });
+
+    });
+  </script>
+</head>
+
+<body>
+  <!-- 상단 -->
+  <header id="haeder" class="golos">
+    <hr>
+    <div class="wrap">
+      <nav class="grid">
+        <h1><a href=""><img src="img/svg/logo.svg" alt="">Design+</a></h1>
+        <div class="gnb h4">
+          <div class="gnb_top">
+            <ul class="gnb_main">
+              <li><a class="gnb_t block golos" href="">Article</a></li>
+              <li><a class="gnb_t block golos" href="">D. find</a></li>
+              <li><a class="gnb_t block golos" href="">Young</a></li>
+            </ul>
+          </div>
+          <div class="gnb_bottom">
+            <ul class="gnb_b gnb_b0">
+              <li class="gnb_sub"><a class="block golos" href="">Project</a></li>
+              <li class="gnb_sub"><a class="block golos" href="">People</a></li>
+              <li class="gnb_sub"><a class="block golos" href="">Now</a></li>
+            </ul>
+            <ul class="gnb_b gnb_b1">
+              <li class="gnb_sub"><a class="block golos" href="">Specialist</a></li>
+              <li class="gnb_sub"><a class="block golos" href="">Focus 9</a></li>
+            </ul>
+            <ul class="gnb_b gnb_b2">
+              <li class="gnb_sub"><a class="block golos" href="">School Show</a></li>
+              <li class="gnb_sub"><a class="block golos" href="">Meet</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="searchmenu">
+          <input type="text" placeholder="Search Design Insight">
+          <a class="search" href=""></a>
+        </div>
+        <div class="news m">
+          <div><a class="block" href="">Newsletter</a></div>
+          <div><a class="block" href="">Submission</a></div>
+        </div>
+        <div class="enb h4">
+          <a href="">+</a>
+          <ul class="enb_show">
+            <li><a class="block" href="">About</a></li>
+            <li><a class="block" href="">Subscription</a></li>
+            <li><a class="block" href="">E-Magazine</a></li>
+          </ul>
+        </div>
+        <div class="sns">
+          <ul>
+            <li><a class="block" href="">Utube</a></li>
+            <li><a class="block" href="">spotify</a></li>
+            <li><a class="block" href="">instagram</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <!-- 타이틀 -->
+  <div id="title">
+    <div class="wrap">
+      <div class="title_l"><a href="">
+          <img src="https://design.co.kr/wp-content/uploads/2025/04/20250402_095533-1500x848.jpg" alt="">
+          <div class="title_l_text white">
+            <h2 class="sm noto">밀러놀의 시작, 크랜브룩 커넥션</h2>
+            <p class="date sm">
+              <time datetime="">2025.04.01</time>
+            </p>
+          </div>
+        </a>
+      </div>
+      <div class="title_r">
+        <div class="imgbox imgbox1">
+          <a href="">
+            <img class="r_first" src="https://design.co.kr/wp-content/uploads/2025/04/20250404_054557-1500x848.jpg"
+              alt="">
+            <div class="title_r_text1 white">
+              <h3 class="sm">행복을 디자인하는 도시,헬싱키의 리브랜딩 프로젝트</h3>
+              <p class="date sm">
+                <time datetime="2025.03.28">2025.03.28</time>
+              </p>
+            </div>
+          </a>
+        </div>
+        <div class="imgbox imgbox2">
+          <a href="">
+            <img class="r_first"
+              src="https://design.co.kr/wp-content/uploads/2025/04/Ace-Hotel-Kyoto_Ace-Suite-1-1500x848.jpg" alt="">
+            <div class="title_r_text2 white">
+              <h3 class="sm">[위클리 디자인] 세계의 도시에서 하룻밤, 호텔이 된 역사와 디자인</h3>
+              <p class="date sm">
+                <time datetime="2025.03.31">2025.03.31</time>
+              </p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+    <hr>
+  </div>
+  <!-- 메인 -->
+  <section id="gallery" class="gallery1">
+    <div class="gridContainer">
+      <div id="gridWrapper" class="grid-wrapper">
+        <div id="grid" class="grid">
+        </div>
+      </div>
+    </div>
+    <div class="gallerybtn">
+      <button id="loadMoreBtn" class="loadMoreBtn">More</button>
+    </div>
+  </section>
+  <section id="specialist">
+    <div class="wrap">
+      <div class="specialist_text">
+        <h2 class="h2 green">2025 Specialist</h2>
+        <p class="p "><a href="" class="green">View All Specialist</a></p>
+      </div>
+      <div class="block">
+        <div class="slick_slider">
+          <div class="slick_box">
+            <a href="">
+              <div class="thumb box1"></div>
+            </a>
+            <h3 class="sm">포썸무브먼트</h3>
+          </div>
+          <div class="slick_box">
+            <a href="">
+              <div class="thumb box2"></div>
+            </a>
+            <h3 class="sm">세컨드화이트</h3>
+          </div>
+          <div class="slick_box">
+            <a href="">
+              <div class="thumb box3"></div>
+            </a>
+            <h3 class="sm">오와이웍스</h3>
+          </div>
+          <div class="slick_box">
+            <a href="">
+              <div class="thumb box4"></div>
+            </a>
+            <h3 class="sm">포트넘버 디나인</h3>
+          </div>
+          <div class="slick_box">
+            <a href="">
+              <div class="thumb box5"></div>
+            </a>
+            <h3 class="sm">니즈디자인랩</h3>
+          </div>
+          <div class="slick_box">
+            <a href="">
+              <div class="thumb box6"></div>
+            </a>
+            <h3 class="sm">디오리진</h3>
+          </div>
+          <div class="slick_box">
+            <a href="">
+              <div class="thumb box7"></div>
+            </a>
+            <h3 class="sm">더브레드앤버터</h3>
+          </div>
+          <div class="slick_box">
+            <a href="">
+              <div class="thumb box8"></div>
+            </a>
+            <h3 class="sm">코브스튜디오</h3>
+          </div>
+          <div class="slick_box">
+            <a href="">
+              <div class="thumb box9"></div>
+            </a>
+            <h3 class="sm">네임드</h3>
+          </div>
+          <div class="slick_box">
+            <a href="">
+              <div class="thumb box10"></div>
+            </a>
+            <h3 class="sm">모임 별</h3>
+          </div>
+          <div class="slick_box">
+            <a href="">
+              <div class="thumb box11"></div>
+            </a>
+            <h3 class="sm">하잎트</h3>
+          </div>
+          <div class="slick_box">
+            <a href="">
+              <div class="thumb box12"></div>
+            </a>
+            <h3 class="sm">비포브랜드</h3>
+          </div>
+          <div class="slick_box">
+            <a href="">
+              <div class="thumb box13"></div>
+            </a>
+            <h3 class="sm">이스트 스튜디오</h3>
+          </div>
+          <div class="slick_box">
+            <a href="">
+              <div class="thumb box14"></div>
+            </a>
+            <h3 class="sm">YNL</h3>
+          </div>
+          <div class="slick_box">
+            <a href="">
+              <div class="thumb box15"></div>
+            </a>
+            <h3 class="sm">베이그</h3>
+          </div>
+          <div class="slick_box">
+            <a href="">
+              <div class="thumb box16"></div>
+            </a>
+            <h3 class="sm">리오랩</h3>
+          </div>
+          <div class="slick_box">
+            <a href="">
+              <div class="thumb box17"></div>
+            </a>
+            <h3 class="sm">헤즈</h3>
+          </div>
+          <div class="slick_box">
+            <a href="">
+              <div class="thumb box18"></div>
+            </a>
+            <h3 class="sm">푸른 이미지</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="focus">
+    <div class="wrap grid">
+      <div class="left">
+        <h2 class="h3">D.find<br><span class="h2">Focus 9</span></h2>
+      </div>
+      <div class="right">
+        <p>최근 주목받고 있는 프로젝트는 무엇일까요? 그리고 이 프로젝트를 완성하기까지 어떤<br>
+          디자이너 또는 디자인 스튜디오가 참여했을까요? 매달 디자인플러스에서 가장 이슈가<br>
+          되는 프로젝트 아홉 개를 선별해 소개합니다. 기업, 브랜드, 공공사업 등 성공적인<br>
+          프로젝트를 수행한 이들이 궁금하다면 먼슬리로 업데이트하는 Focus 9의 콘텐츠를<br>
+          주목해 보세요.
+        </p>
+        <div class="focus_btn">
+          <p><a href="">이달의 Focus 9 보러가기</a></p>
+          <p><a href="">모든 Focus 9 보러가기</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="podcast">
+    <div class="wrap grid">
+      <div class="left">
+        <div class="pod_title">
+          <h2>Podcast</h2>
+          <p>beta</p>
+          <a href=""></a>
+        </div>
+        <div class="pod_card grid">
+          <h3>off D record</h3>
+          <p><a href="">View All Episodes </a></p>
+          <p>
+            2018년 시작해 많은 사랑을 받았던 월간 디자인의 팟캐스트 '오프디레코드'가 새<br>
+            시즌으로 돌아왔습니다. 디자인 커뮤니티 '디자인 스펙트럼'과 협업하는 이번 시즌은<br>
+            월 1회 특별 게스트와 진행하는 토크로 꾸며집니다.
+          </p>
+        </div>
+        <div class="record">
+          <div class="pod_re grid">
+            <div class="pod_thumb"></div>
+            <h4>ep5. 몰입과 집착</h4>
+            <p class="pod_date">Dec 9· <a href="">off D record</a></p>
+            <p class="pod_save"><a href="">Save on Spotify</a></p>
+            <p class="pod_time">28:10</p>
+            <p class="pod_play"></p>
+          </div>
+          <div class="pod_re grid">
+            <div class="pod_thumb"></div>
+            <h4>ep4. 서울 그리고 디자인</h4>
+            <p class="pod_date">Nov 5· <a href="">off D record</a></p>
+            <p class="pod_save"><a href="">Save on Spotify</a></p>
+            <p class="pod_time">27:30</p>
+            <p class="pod_play"></p>
+          </div>
+          <div class="pod_re grid">
+            <div class="pod_thumb"></div>
+            <h4>ep3. 그 디자인은 왜 탈락했을까?</h4>
+            <p class="pod_date">Oct 7· <a href="">off D record</a></p>
+            <p class="pod_save"><a href="">Save on Spotify</a></p>
+            <p class="pod_time">26:26</p>
+            <p class="pod_play"></p>
+          </div>
+          <div class="pod_re grid">
+            <div class="pod_thumb"></div>
+            <h4>ep2. 그래픽 디자이너가 공유 오피스를?</h4>
+            <p class="pod_date">Sep 10· <a href="">off D record</a></p>
+            <p class="pod_save"><a href="">Save on Spotify</a></p>
+            <p class="pod_time">31:55</p>
+            <p class="pod_play"></p>
+          </div>
+          <div class="pod_re grid">
+            <div class="pod_thumb"></div>
+            <h4>ep1. K-리빙 2.0시대</h4>
+            <p class="pod_date">Aug 5· <a href="">off D record</a></p>
+            <p class="pod_save"><a href="">Save on Spotify</a></p>
+            <p class="pod_time">37:30</p>
+            <p class="pod_play"></p>
+          </div>
+        </div>
+      </div>
+      <hr>
+      <div class="right">
+        <h2>Video</h2>
+        <a href=""></a>
+        <div class="youtube">
+          <div class="youtube_box youtube_box1"></div>
+          <h3 class="h5">Design+ | Creator+ 메이킴 비주얼 아티스트</h3>
+        </div>
+        <div class="youtube">
+          <div class="youtube_box youtube_box2"></div>
+          <h3 class="h5">Design+ | Creator+ 조구만 스튜디오</h3>
+        </div>
+        <div class="youtube">
+          <div class="youtube_box youtube_box3"></div>
+          <h3 class="h5">Design+ | Creator+ 김미연 전시 기획자</h3>
+        </div>
+        <div class="youtube">
+          <div class="youtube_box youtube_box4"></div>
+          <h3 class="h5">360도 파노라마 뷰! 처인휴게소 1분 정리</h3>
+        </div>
+        <div class="youtube">
+          <div class="youtube_box youtube_box5"></div>
+          <h3 class="h5">드론부터 인공지능까지! 우븐시티 1분 정리</h3>
+        </div>
+        <div class="youtube">
+          <div class="youtube_box youtube_box6"></div>
+          <h3 class="h5">2025년 올해의 컬러! 모카 무스 1분 정리</h3>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+  <!-- 푸터 -->
+  <footer></footer>
+  <!-- egjs-grid 최신 CDN -->
+  <script src="js/masonry.pkgd.min.js"></script>
+  <script src="js/imagesloaded.pkgd.min.js"></script>
+
+  <script>
+    // Masonry grid--------------------------------------------------------------------------
+
+    const gridElement = document.getElementById("grid");
+    const loadMoreBtn = document.getElementById("loadMoreBtn");
+
+    const msnry = new Masonry(gridElement, {
+      itemSelector: '.item',
+      columnWidth: '.item',
+      gutter: 20,
+      fitWidth: true
+    });
+
+    let cardsData = [];
+    let shownCount = 0;
+    const initialCount = 20;
+
+    function createCardElement(card, i) {
+      const item = document.createElement("div");
+      item.className = "item";
+      const tagHTML = card.tags.map(tag => `<span class="tag">${tag}</span>`).join("");
+      item.innerHTML = `
+    <div class="thumbnail">
+      <img src="${card.img}" alt="썸네일 이미지 ${i + 1}">
+    </div>
+    <div class="content">
+      <h3 class="title">${card.title}</h3>
+      <time datetime="${card.date}" class="date">${card.date.replace(/-/g, ".")}</time>
+      <div class="tags">${tagHTML}</div>
+    </div>
+  `;
+      return item;
+    }
+
+    function showCards(count) {
+      const fragment = document.createDocumentFragment();
+      const newItems = [];
+
+      for (let i = shownCount; i < shownCount + count && i < cardsData.length; i++) {
+        const item = createCardElement(cardsData[i], i);
+        fragment.appendChild(item);
+        newItems.push(item);
+      }
+
+      gridElement.appendChild(fragment);
+      shownCount += count;
+
+      imagesLoaded(gridElement, () => {
+        msnry.appended(newItems);
+        msnry.layout();
+      });
+
+      if (shownCount >= cardsData.length) {
+        loadMoreBtn.style.display = 'none';
+      }
+    }
+
+    // 버튼 클릭 시
+    $(".loadMoreBtn").click(function () {
+      $(this).hide(); // 버튼 숨기기
+      $("#gallery>div").removeClass("gridContainer");
+      $("#gallery>div").addClass("gridexpanded");
+      $("#gallery").addClass("expanded");
+      $("#gallery").removeClass("gallery1");
+    });
+
+    // 초기 카드 로딩
+    fetch("js/cards.json")
+      .then(res => res.json())
+      .then(cards => {
+        cardsData = cards;
+        showCards(initialCount);
+      });
+
+
+
+    //end---------------------------------------------------------------------------------
+  </script>
+
+</body>
+
+</html>

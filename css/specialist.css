@@ -1,0 +1,183 @@
+#specialist {
+  background-color: #2b2b2b;
+  height: 482px;
+  position: relative;
+}
+
+#specialist .wrap {
+  height: 100%;
+  position: relative;
+}
+
+#specialist .specialist_text {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding-top: 40px;
+}
+
+#specialist .h2 {
+  font-family: "Golos Text", sans-serif !important;
+  font-weight: 700;
+}
+
+#specialist .p {
+  display: inline-block;
+}
+
+#specialist .p a {
+  font-family: "Golos Text", sans-serif !important;
+  display: flex;
+  align-items: center;
+}
+
+#specialist .p a::after {
+  content: "";
+  margin-left: 5px;
+  background-image: url(../img/svg/right_arrow_icon.svg);
+  width: 15px;
+  height: 15px;
+  background-size: 90%;
+  background-repeat: no-repeat;
+  background-position: center;
+  transform: translateY(2px);
+}
+
+#specialist .block {
+  width: calc(100vw - 9px);
+  left: 50%;
+  margin-left: -50vw;
+  position: relative;
+  margin-top: 30px;
+}
+
+#specialist .slick-slider {
+  display: flex;
+  margin: 0 auto;
+  width: auto !important;
+  /* ✅ slick 내부 강제 너비 해제 */
+  flex-shrink: 0;
+  /* 줄어들지 않게 */
+}
+
+#specialist .slick-slider div {
+  height: 300px;
+  display: block;
+}
+
+#specialist .slick-slider .slick_box {
+  width: 300px;
+  position: relative;
+  margin-right: 20px;
+}
+
+#specialist .slick-slider div a {
+  width: 300px;
+  height: 100%;
+  display: block;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+#specialist .slick-slider div h3 {
+  display: inline-block;
+  z-index: 3;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: white;
+}
+
+.slickbox {
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.3s ease;
+}
+
+.slick_box:hover .thumb {
+  transform: scale(1.2);
+}
+
+.slick_box .thumb {
+  width: 100%;
+  height: 100%;
+  display: block;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.3s ease;
+  transform-origin: center;
+  border-radius: 20px;
+}
+
+.box1 {
+  background-image: linear-gradient(to bottom, transparent 70%, #0009 100%), url(https://design.co.kr/wp-content/uploads/2024/11/foursome_thumbnail-768x415.jpg);
+}
+
+.box2 {
+  background-image: linear-gradient(to bottom, transparent 70%, #0009 100%), url(https://design.co.kr/wp-content/uploads/2024/11/%EC%A0%9C%EB%AA%A9-%EC%97%86%EC%9D%8C-1-2.jpg);
+}
+
+.box3 {
+  background-image: linear-gradient(to bottom, transparent 70%, #0009 100%), url(https://design.co.kr/wp-content/uploads/2024/11/02-1-768x428.webp);
+}
+
+.box4 {
+  background-image: linear-gradient(to bottom, transparent 70%, #0009 100%), url(https://design.co.kr/wp-content/uploads/2024/11/%ED%98%84%EB%8C%80%EB%AA%A8%EB%B9%84%EC%8A%A4-%EC%97%BD%EC%84%9C01-768x920.jpg);
+}
+
+.box5 {
+  background-image: linear-gradient(to bottom, transparent 70%, #0009 100%), url(https://design.co.kr/wp-content/uploads/2024/11/%EA%B4%91%EC%95%BC_3-768x513.jpg);
+}
+
+.box6 {
+  background-image: linear-gradient(to bottom, transparent 70%, #0009 100%), url(https://design.co.kr/wp-content/uploads/2024/11/00.jpg);
+}
+
+.box7 {
+  background-image: linear-gradient(to bottom, transparent 70%, #0009 100%), url(https://design.co.kr/wp-content/uploads/2024/11/%EB%B9%84%EC%9E%90%EC%B9%B4%EB%93%9C-768x435.jpg);
+}
+
+.box8 {
+  background-image: linear-gradient(to bottom, transparent 70%, #0009 100%), url(https://design.co.kr/wp-content/uploads/2024/11/0Q8A6516-768x1023.jpg);
+}
+
+.box9 {
+  background-image: linear-gradient(to bottom, transparent 70%, #0009 100%), url(https://design.co.kr/wp-content/uploads/2024/11/PLUS-ETF_%EC%98%A5%EC%99%B8%EA%B4%91%EA%B3%A0%EB%B8%8C%EB%9E%9C%EB%93%9C-768x590.jpg);
+}
+
+.box10 {
+  background-image: linear-gradient(to bottom, transparent 70%, #0009 100%), url(https://design.co.kr/wp-content/uploads/2024/11/TheHyundai-Popupstore-1-768x576.jpg);
+}
+
+.box11 {
+  background-image: linear-gradient(to bottom, transparent 70%, #0009 100%), url(https://design.co.kr/wp-content/uploads/2024/11/01_%EC%9D%B4%EB%93%A4%EC%8A%A4_%ED%8F%AC%EC%8A%A4%ED%84%B0-1-768x512.jpg);
+
+}
+
+.box12 {
+  background-image: linear-gradient(to bottom, transparent 70%, #0009 100%), url(https://design.co.kr/wp-content/uploads/2024/11/keeslow_01-768x512.jpg);
+}
+
+.box13 {
+  background-image: linear-gradient(to bottom, transparent 70%, #0009 100%), url(https://design.co.kr/wp-content/uploads/2024/11/DSC04377-%EB%B3%B5%EC%82%AC_cmyk-768x512.jpg);
+}
+
+.box14 {
+  background-image: linear-gradient(to bottom, transparent 70%, #0009 100%), url(https://design.co.kr/wp-content/uploads/2024/11/YNLDesign-shinhansoltravel-13-%EB%B3%B5%EC%82%AC%EB%B3%B8-768x512.jpg);
+}
+
+.box15 {
+  background-image: linear-gradient(to bottom, transparent 70%, #0009 100%), url(https://design.co.kr/wp-content/uploads/2024/11/VEIG_Galaxy-OOH-1-768x478.jpg);
+}
+
+.box16 {
+  background-image: linear-gradient(to bottom, transparent 70%, #0009 100%), url(https://design.co.kr/wp-content/uploads/2024/11/00-6.jpg);
+}
+
+.box17 {
+  background-image: linear-gradient(to bottom, transparent 70%, #0009 100%), url(https://design.co.kr/wp-content/uploads/2024/11/%ED%97%A4%EC%A6%8810_CMYK-768x518.jpg);
+}
+
+.box18 {
+  background-image: linear-gradient(to bottom, transparent 70%, #0009 100%), url(https://design.co.kr/wp-content/uploads/2024/11/3_zero-sugar-768x512.jpg);
+}

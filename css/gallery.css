@@ -1,0 +1,149 @@
+.gallery1 {
+  height: 900px !important;
+  transition: max-height 0.5s ease;
+}
+
+#gallery .gridContainer {
+  position: relative;
+  max-height: 800px !important;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+  z-index: 1;
+}
+
+.expanded {
+  height: 1800px !important;
+  /* ✅ 버튼 클릭 후 전체 보여줌 */
+  overflow: visible;
+}
+
+.gridexpanded {
+  position: relative;
+  height: 1800px !important;
+  /* ✅ 버튼 클릭 후 전체 보여줌 */
+  overflow: visible;
+}
+
+#gridWrapper {
+  width: 1440px;
+  margin: 0 auto;
+  position: relative;
+  display: block;
+  margin-top: 40px;
+  z-index: 0;
+}
+
+#grid {
+  margin: 0 auto;
+}
+
+#grid .item {
+  width: calc(20% - 16px);
+  margin-bottom: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 1023px) {
+  #grid .item {
+    width: calc(25% - 16px);
+  }
+}
+
+@media (max-width: 767px) {
+  #grid .item {
+    width: calc(50% - 16px);
+  }
+}
+
+#grid .thumbnail {
+  width: 100%;
+  overflow: hidden;
+}
+
+#grid .thumbnail img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+#grid .content {
+  width: 100%;
+  padding: 16px;
+  box-sizing: border-box;
+}
+
+#grid .title {
+  font-weight: 600;
+  word-break: break-word;
+  line-height: 1.4;
+}
+
+#grid .date {
+  font-size: 14px;
+  color: #666;
+  font-weight: 400;
+}
+
+#grid .tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  font-family: "Golos Text", sans-serif !important;
+  margin-top: 7px;
+}
+
+#grid .tag {
+  padding: 4px 8px;
+  font-size: 11px;
+  border-radius: 15px;
+  border: 1px solid #000;
+  cursor: pointer;
+}
+
+#grid .tag:hover {
+  background-color: #99ff6b;
+}
+
+.tags>.tag:first-of-type {
+  border-radius: 0px !important;
+  border: 0 !important;
+  background-color: #2b2b2b;
+  color: white;
+}
+
+.tags>.tag:first-of-type:hover {
+  color: #99ff6b;
+  background-color: #2b2b2b !important;
+}
+
+.gallerybtn {
+  width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  height: 40px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.loadMoreBtn {
+  margin-top: 40px;
+  border: 0;
+  width: 100px;
+  height: 30px;
+  border-radius: 6px;
+  background-color: #0002;
+  color: #737373;
+  font-family: "Golos Text", sans-serif !important;
+  font-size: 14px;
+}
+
+.loadMoreBtn:hover {
+  background-color: #666;
+  color: #fff;
+}
