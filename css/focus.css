@@ -51,14 +51,6 @@
   padding: 3px 11px;
 }
 
-#focus .focus_btn p:first-child {
-  background-color: #2b2b2b;
-}
-
-#focus .focus_btn p:first-child a {
-  color: #99ff6a;
-}
-
 #focus .focus_btn p a::after {
   content: "";
   display: inline-block;
@@ -69,10 +61,42 @@
   background-position: center;
 }
 
-#focus .focus_btn p:first-of-type a::after {
+#focus .focus_btn .f_btn1 a::after {
   background-image: url(../img/svg/right_arrow_icon.svg);
 }
 
-#focus .focus_btn:nth-child(2) a::after {
+#focus .focus_btn .f_btn2 a::after {
+  background-image: url(../img/svg/right_arrow_icon2.svg);
+}
+
+#focus .focus_btn .f_btn1 {
+  background-color: #2b2b2b;
+}
+
+#focus .focus_btn .f_btn1:hover {
+  background-color: transparent;
+}
+
+#focus .focus_btn .f_btn1:hover a {
+  color: #2b2b2b;
+}
+
+#focus .focus_btn .f_btn1 a {
+  color: #99ff6a;
+}
+
+#focus .focus_btn .f_btn2:hover {
+  background-color: #2b2b2b;
+}
+
+#focus .focus_btn .f_btn2:hover a {
+  color: #99ff6a;
+}
+
+#focus .focus_btn .f_btn2:hover a::after {
+  background-image: url(../img/svg/right_arrow_icon.svg);
+}
+
+#focus .focus_btn .f_btn1:hover a::after {
   background-image: url(../img/svg/right_arrow_icon2.svg);
 }

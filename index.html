@@ -13,6 +13,8 @@
   <link rel="stylesheet" href="css/gallery.css">
   <link rel="stylesheet" href="css/specialist.css">
   <link rel="stylesheet" href="css/focus.css">
+  <link rel="stylesheet" href="css/podcast.css">
+  <link rel="stylesheet" href="css/footer.css">
   <!-- 구글폰트 -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -40,6 +42,72 @@
         pauseOnHover: false,      // 마우스 올려도 계속 재생
         pauseOnFocus: false,      // 포커스 돼도 멈추지 않음
         variableWidth: true,      // 슬라이드마다 너비 다르게 설정 가능
+      });
+
+      $('.you_g').slick({
+        slidesToShow: 3,
+        centerMode: false,      // 가운데 정렬
+        variableWidth: true,   // 슬라이드마다 고정된 width 적용
+        adaptiveHeight: false,
+        swipeToSlide: true,
+        arrows: false,
+        dots: false,
+        autoplay: false,
+        draggable: true,       // 마우스 드래그 허용
+        swipe: true,           // 터치 스와이프 허용
+        touchMove: true,       // 터치 드래그 허용
+        infinite: false        // 끝나면 멈춤
+      });
+
+    });
+  </script>
+  <script>
+    $(document).ready(function () {
+      //유튜브 설정 ----------------------------------------------------------------------------
+      const $slider = $('.you_g');
+
+      // 드래그 시작할 때 iframe 클릭 막기
+      $slider.on('mousedown touchstart', function () {
+        $(this).find('.iframe_overlay').css('pointer-events', 'auto');
+      });
+
+      // 드래그 끝났을 때 무조건 해제 (모든 케이스 커버)
+      $slider.on('mouseup touchend mouseleave touchcancel dragend', function () {
+        $(this).find('.iframe_overlay').css('pointer-events', 'none');
+      });
+      $(window).on('mouseup touchend', function () {
+        $('.iframe_overlay').css('pointer-events', 'none');
+      });
+      // 키보드 이동
+      $(window).on('load', function () {
+        $('body').focus();
+      });
+
+      $('body').on('keydown', function (e) {
+        if (e.key === 'ArrowLeft') {
+          $('.you_g').slick('slickPrev');
+        } else if (e.key === 'ArrowRight') {
+          $('.you_g').slick('slickNext');
+        }
+      });
+      console.log($('.you_g').slick('getSlick').slideCount); // 전체 슬라이드 개수
+      console.log($('.you_g').slick('slickCurrentSlide'));   // 현재 슬라이드 인덱스
+      //팟캐스트 스크롤 ---------------------------------------------------------------
+      const $record = $('.record');
+      const scrollStep = 180; // 이동 거리 (px)
+      const scrollDuration = 300; // 이동 시간 (ms)
+
+      $(document).on('keydown', function (e) {
+        if (['ArrowUp', 'ArrowDown'].includes(e.key)) {
+          e.preventDefault(); // 페이지 전체 스크롤 방지
+          const current = $record.scrollTop();
+
+          if (e.key === 'ArrowDown') {
+            $record.stop().animate({ scrollTop: current + scrollStep }, scrollDuration);
+          } else if (e.key === 'ArrowUp') {
+            $record.stop().animate({ scrollTop: current - scrollStep }, scrollDuration);
+          }
+        }
       });
 
     });
@@ -290,106 +358,233 @@
           주목해 보세요.
         </p>
         <div class="focus_btn">
-          <p><a href="">이달의 Focus 9 보러가기</a></p>
-          <p><a href="">모든 Focus 9 보러가기</a></p>
+          <p class="f_btn1"><a href="">이달의 Focus 9 보러가기</a></p>
+          <p class="f_btn2"><a href="">모든 Focus 9 보러가기</a></p>
         </div>
       </div>
     </div>
   </section>
   <section id="podcast">
-    <div class="wrap grid">
+    <div class="l_wrap grid white">
       <div class="left">
         <div class="pod_title">
-          <h2>Podcast</h2>
-          <p>beta</p>
+          <h2 class="h2">Podcast</h2>
+          <p>Beta</p>
           <a href=""></a>
         </div>
         <div class="pod_card grid">
-          <h3>off D record</h3>
+          <h3 class="h4">off D record</h3>
           <p><a href="">View All Episodes </a></p>
           <p>
             2018년 시작해 많은 사랑을 받았던 월간 디자인의 팟캐스트 '오프디레코드'가 새<br>
-            시즌으로 돌아왔습니다. 디자인 커뮤니티 '디자인 스펙트럼'과 협업하는 이번 시즌은<br>
-            월 1회 특별 게스트와 진행하는 토크로 꾸며집니다.
+            시즌으로 돌아왔습니다. 디자인 커뮤니티 '디자인 스펙트럼'과 협업하는 이번<br>
+            시즌은 월 1회 특별 게스트와 진행하는 토크로 꾸며집니다.
           </p>
         </div>
         <div class="record">
           <div class="pod_re grid">
-            <div class="pod_thumb"></div>
-            <h4>ep5. 몰입과 집착</h4>
-            <p class="pod_date">Dec 9· <a href="">off D record</a></p>
+            <div class="pod_thumb pod_thumb5"></div>
+            <a class="s_icon" href=""></a>
+            <h4 class="sm">ep5. 몰입과 집착</h4>
+            <p class="pod_date sm">Dec 9 · <a href="">off D record</a></p>
             <p class="pod_save"><a href="">Save on Spotify</a></p>
-            <p class="pod_time">28:10</p>
-            <p class="pod_play"></p>
+            <div class="pod_bottom">
+              <span class="p_line_g">
+                <a href="" class="before"></a>
+                <span class="pod_line"></span>
+                <a href="" class="after"></a>
+              </span>
+              <p class="pod_time">28:10</p>
+              <a class="pod_etc" href=""></a>
+            </div>
+            <p class="pod_play"><a href=""></a></p>
           </div>
           <div class="pod_re grid">
-            <div class="pod_thumb"></div>
-            <h4>ep4. 서울 그리고 디자인</h4>
-            <p class="pod_date">Nov 5· <a href="">off D record</a></p>
+            <div class="pod_thumb pod_thumb4"></div>
+            <a class="s_icon" href=""></a>
+            <h4 class="sm">ep4. 서울 그리고 디자인</h4>
+            <p class="pod_date sm">Nov 5 · <a href="">off D record</a></p>
             <p class="pod_save"><a href="">Save on Spotify</a></p>
-            <p class="pod_time">27:30</p>
-            <p class="pod_play"></p>
+            <div class="pod_bottom">
+              <span class="p_line_g">
+                <a href="" class="before"></a>
+                <span class="pod_line"></span>
+                <a href="" class="after"></a>
+              </span>
+              <p class="pod_time">27:30</p>
+              <a class="pod_etc" href=""></a>
+            </div>
+            <p class="pod_play"><a href=""></a></p>
           </div>
           <div class="pod_re grid">
-            <div class="pod_thumb"></div>
-            <h4>ep3. 그 디자인은 왜 탈락했을까?</h4>
-            <p class="pod_date">Oct 7· <a href="">off D record</a></p>
+            <div class="pod_thumb pod_thumb3"></div>
+            <a class="s_icon" href=""></a>
+            <h4 class="sm">ep3. 그 디자인은 왜 탈락했을까?</h4>
+            <p class="pod_date sm">Oct 7 · <a href="">off D record</a></p>
             <p class="pod_save"><a href="">Save on Spotify</a></p>
-            <p class="pod_time">26:26</p>
-            <p class="pod_play"></p>
+            <div class="pod_bottom">
+              <span class="p_line_g">
+                <a href="" class="before"></a>
+                <span class="pod_line"></span>
+                <a href="" class="after"></a>
+              </span>
+              <p class="pod_time">26:26</p>
+              <a class="pod_etc" href=""></a>
+            </div>
+            <p class="pod_play"><a href=""></a></p>
           </div>
           <div class="pod_re grid">
-            <div class="pod_thumb"></div>
-            <h4>ep2. 그래픽 디자이너가 공유 오피스를?</h4>
-            <p class="pod_date">Sep 10· <a href="">off D record</a></p>
+            <div class="pod_thumb pod_thumb2"></div>
+            <a class="s_icon" href=""></a>
+            <h4 class="sm">ep2. 그래픽 디자이너가 공유 오피스를?</h4>
+            <p class="pod_date sm">Sep 10 · <a href="">off D record</a></p>
             <p class="pod_save"><a href="">Save on Spotify</a></p>
-            <p class="pod_time">31:55</p>
-            <p class="pod_play"></p>
+            <div class="pod_bottom">
+              <span class="p_line_g">
+                <a href="" class="before"></a>
+                <span class="pod_line"></span>
+                <a href="" class="after"></a>
+              </span>
+              <p class="pod_time">31:55</p>
+              <a class="pod_etc" href=""></a>
+            </div>
+            <p class="pod_play"><a href=""></a></p>
           </div>
           <div class="pod_re grid">
-            <div class="pod_thumb"></div>
-            <h4>ep1. K-리빙 2.0시대</h4>
-            <p class="pod_date">Aug 5· <a href="">off D record</a></p>
+            <div class="pod_thumb pod_thumb1"></div>
+            <a class="s_icon" href=""></a>
+            <h4 class="sm">ep1. K-리빙 2.0시대</h4>
+            <p class="pod_date sm">Aug 5 · <a href="">off D record</a></p>
             <p class="pod_save"><a href="">Save on Spotify</a></p>
-            <p class="pod_time">37:30</p>
-            <p class="pod_play"></p>
+            <div class="pod_bottom">
+              <span class="p_line_g">
+                <a href="" class="before"></a>
+                <span class="pod_line"></span>
+                <a href="" class="after"></a>
+              </span>
+              <p class="pod_time">37:30</p>
+              <a class="pod_etc" href=""></a>
+            </div>
+            <p class="pod_play"><a href=""></a></p>
           </div>
         </div>
+        <hr>
       </div>
-      <hr>
       <div class="right">
-        <h2>Video</h2>
-        <a href=""></a>
-        <div class="youtube">
-          <div class="youtube_box youtube_box1"></div>
-          <h3 class="h5">Design+ | Creator+ 메이킴 비주얼 아티스트</h3>
+        <div class="video_title">
+          <h2 class="h2">Video</h2>
+          <a href=""></a>
         </div>
-        <div class="youtube">
-          <div class="youtube_box youtube_box2"></div>
-          <h3 class="h5">Design+ | Creator+ 조구만 스튜디오</h3>
+
+        <div class="you_g" tabindex="0">
+          <div class="youtube">
+            <div class="iframe_overlay"></div>
+            <div class="iframe_box">
+              <iframe class="youtube_box youtube_box1" src="https://www.youtube.com/embed/iyPn8_6prAw"
+                title="Design+ | Creator+ 메이킴 비주얼 아티스트" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <h3 class="h6">Design+ | Creator+ 메이킴 비주얼 아티스트</h3>
+          </div>
+
+          <div class="youtube">
+            <div class="iframe_overlay"></div>
+            <div class="iframe_box">
+              <iframe class="youtube_box youtube_box2" src="https://www.youtube.com/embed/IPgmXZ910og"
+                title="Design+ | Creator+ 조구만 스튜디오" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <h3 class="h6">Design+ | Creator+ 조구만 스튜디오</h3>
+          </div>
+
+          <div class="youtube">
+            <div class="iframe_overlay"></div>
+            <div class="iframe_box">
+              <iframe class="youtube_box youtube_box3" src="https://www.youtube.com/embed/XCcHkis3iAY"
+                title="Design+ | Creator+ 김미연 전시 기획자" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <h3 class="h6">Design+ | Creator+ 김미연 전시 기획자</h3>
+          </div>
+
+          <div class="youtube">
+            <div class="iframe_overlay"></div>
+            <div class="iframe_box">
+              <iframe class="youtube_box youtube_box4" src="https://www.youtube.com/embed/RXh_m1b5jXM"
+                title="360도 파노라마 뷰! 처인휴게소 1분 정리" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <h3 class="h6">360도 파노라마 뷰! 처인휴게소 1분 정리</h3>
+          </div>
+
+          <div class="youtube">
+            <div class="iframe_overlay"></div>
+            <div class="iframe_box">
+              <iframe class="youtube_box youtube_box5" src="https://www.youtube.com/embed/VktJbN5GEsA"
+                title="드론부터 인공지능까지! 우븐시티 1분 정리" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <h3 class="h6">드론부터 인공지능까지! 우븐시티 1분 정리</h3>
+          </div>
+
+          <div class="youtube">
+            <div class="iframe_overlay"></div>
+            <div class="iframe_box youtube_box6">
+              <iframe class="youtube_box " src="https://www.youtube.com/embed/uawmonh53yk"
+                title="2025년 올해의 컬러! 모카 무스 1분 정리" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <h3 class="h6">2025년 올해의 컬러! 모카 무스 1분 정리</h3>
+          </div>
         </div>
-        <div class="youtube">
-          <div class="youtube_box youtube_box3"></div>
-          <h3 class="h5">Design+ | Creator+ 김미연 전시 기획자</h3>
-        </div>
-        <div class="youtube">
-          <div class="youtube_box youtube_box4"></div>
-          <h3 class="h5">360도 파노라마 뷰! 처인휴게소 1분 정리</h3>
-        </div>
-        <div class="youtube">
-          <div class="youtube_box youtube_box5"></div>
-          <h3 class="h5">드론부터 인공지능까지! 우븐시티 1분 정리</h3>
-        </div>
-        <div class="youtube">
-          <div class="youtube_box youtube_box6"></div>
-          <h3 class="h5">2025년 올해의 컬러! 모카 무스 1분 정리</h3>
-        </div>
+
+
       </div>
     </div>
     </div>
   </section>
   <!-- 푸터 -->
-  <footer></footer>
+  <footer>
+    <div class="wrap">
+      <div class="first">
+        <address>
+          <p class="p">서울시 중구 동호로 272 (주)디자인하우스</p>
+          <p class="p">대표자. 이영혜</p>
+          <p class="p">사업자등록번호. 203-81-43529</p>
+        </address>
+      </div>
+      <div class="second">
+        <address>
+          <p class="p">전화번호. 02-2275-6151</p>
+          <p class="p">이메일. designplus@design.co.kr</p>
+        </address>
+      </div>
+      <div class="third">
+        <ul class="footer_links">
+          <li><a href="">회사소개</a></li>
+          <li><a href="">서비스이용약관</a></li>
+          <li><a href="">개인정보처리방침</a></li>
+          <li><a href="">고객센터</a></li>
+          <li><a href="">정기구독</a></li>
+          <li><a href="">E 매거진</a></li>
+          <li><a href="">제휴문의</a></li>
+          <li><a href="">광고문의</a></li>
+          <li><a class="family" href="">패밀리 사이트</a></li>
+        </ul>
+        <div class="family_new">
+          <ul>
+            <li><a href="">행복이 가득한 집</a></li>
+            <li><a href="">럭셔리</a></li>
+            <li><a href="">서울리빙디자인페어</a></li>
+            <li><a href="">부산디자인페어</a></li>
+            <li><a href="">서울디자인페스티벌</a></li>
+            <li><a href="">1집구석</a></li>
+            <li><a href="">코리아디자인페스티벌</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="copy">
+        <p class="p">
+          Copyright © 2025 Designhouse<br>
+          inc. All rights reserved.
+        </p>
+      </div>
+    </div>
+  </footer>
   <!-- egjs-grid 최신 CDN -->
   <script src="js/masonry.pkgd.min.js"></script>
   <script src="js/imagesloaded.pkgd.min.js"></script>
