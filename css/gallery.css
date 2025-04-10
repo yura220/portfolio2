@@ -44,11 +44,13 @@
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
 }
 
 @media (max-width: 1023px) {
   #grid .item {
     width: calc(25% - 16px);
+    cursor: pointer;
   }
 }
 
@@ -61,6 +63,7 @@
 #grid .thumbnail {
   width: 100%;
   overflow: hidden;
+  border: 20px;
 }
 
 #grid .thumbnail img {
@@ -68,6 +71,11 @@
   height: auto;
   display: block;
   object-fit: cover;
+  transition: .3s ease-in-out;
+}
+
+#grid .thumbnail:hover img {
+  scale: 1.03;
 }
 
 #grid .content {
@@ -141,6 +149,7 @@
   color: #737373;
   font-family: "Golos Text", sans-serif !important;
   font-size: 14px;
+  cursor: pointer;
 }
 
 .loadMoreBtn:hover {

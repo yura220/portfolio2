@@ -24,7 +24,6 @@
   <!-- Specialist slick.js -->
   <link rel="stylesheet" type="text/css" href="js/slick/slick.css" />
   <link rel="stylesheet" type="text/css" href="js/slick/slick-theme.css" />
-  <!-- <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script> -->
   <script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
   <script type="text/javascript" src="js/slick/slick.min.js"></script>
   <script>
@@ -63,6 +62,53 @@
   </script>
   <script>
     $(document).ready(function () {
+      //새로고침 막기 -----------------------------------------------------------
+      document.addEventListener('click', function (e) {
+        const el = e.target.closest('a');
+        if (!el) return;
+
+        const href = el.getAttribute('href');
+        if (href === '' || href === '#') {
+          e.preventDefault(); // ✅ 새로고침만 막기
+        }
+      });
+
+
+      //헤드 메인 버튼 ----------------------------------------------------------------
+
+      // 초기 상태: 모든 서브메뉴 숨기고 0번만 보여주기
+      $(".gnb_b").addClass("hide");
+      $(".gnb_b0").removeClass("hide");
+
+      // hover 시 해당 index 서브메뉴 보이기
+      $(".gnb_main li").on("mouseenter", function () {
+        const index = $(this).index();
+        $(".gnb_b").addClass("hide");
+        $(".gnb_b").eq(index).removeClass("hide");
+      });
+
+      // 마우스가 메뉴 전체 영역 벗어나면 0번으로 복귀
+      $(".gnb").on("mouseleave", function () {
+        $(".gnb_b").addClass("hide");
+        $(".gnb_b0").removeClass("hide");
+      });
+
+      //enb 클릭 -----------------------------------------------------------------
+      const checkbox = document.querySelector(".checkbox");
+      const menu = document.querySelector(".enb_show");
+
+      checkbox.addEventListener("click", function () {
+        this.classList.toggle("active");   // 아이콘 회전
+        menu.classList.toggle("active");   // 메뉴 열고 닫기
+      });
+
+      const enbBox = document.querySelector('.enb_box');
+
+      checkbox.addEventListener('click', () => {
+        enbBox.classList.toggle('active');
+      });
+
+
       //유튜브 설정 ----------------------------------------------------------------------------
       const $slider = $('.you_g');
 
@@ -109,14 +155,24 @@
           }
         }
       });
+      // 푸터 패밀리사이트 -------------------------------------------------
+      $(".family").parent("li").hover(
+        function () {
+          $(this).find(".family_new").addClass("show").removeClass("hide");
+        },
+        function () {
+          $(this).find(".family_new").removeClass("show").addClass("hide");
+        }
+      );
 
+      //end-------------------------------------------------------------------
     });
   </script>
 </head>
 
 <body>
   <!-- 상단 -->
-  <header id="haeder" class="golos">
+  <header id="header" class="golos">
     <hr>
     <div class="wrap">
       <nav class="grid">
@@ -154,12 +210,16 @@
           <div><a class="block" href="">Submission</a></div>
         </div>
         <div class="enb h4">
-          <a href="">+</a>
-          <ul class="enb_show">
-            <li><a class="block" href="">About</a></li>
-            <li><a class="block" href="">Subscription</a></li>
-            <li><a class="block" href="">E-Magazine</a></li>
-          </ul>
+          <div class="checkbox">
+            <span class="toggle_icon"></span>
+          </div>
+          <div class="enb_box">
+            <ul class="enb_show">
+              <li><a class="block" href="">About</a></li>
+              <li><a class="block" href="">Subscription</a></li>
+              <li><a class="block" href="">E-Magazine</a></li>
+            </ul>
+          </div>
         </div>
         <div class="sns">
           <ul>
@@ -175,7 +235,9 @@
   <div id="title">
     <div class="wrap">
       <div class="title_l"><a href="">
-          <img src="https://design.co.kr/wp-content/uploads/2025/04/20250402_095533-1500x848.jpg" alt="">
+          <div class="title_img">
+            <img src="https://design.co.kr/wp-content/uploads/2025/04/20250402_095533-1500x848.jpg" alt="">
+          </div>
           <div class="title_l_text white">
             <h2 class="sm noto">밀러놀의 시작, 크랜브룩 커넥션</h2>
             <p class="date sm">
@@ -187,8 +249,10 @@
       <div class="title_r">
         <div class="imgbox imgbox1">
           <a href="">
-            <img class="r_first" src="https://design.co.kr/wp-content/uploads/2025/04/20250404_054557-1500x848.jpg"
-              alt="">
+            <div class="title_img">
+              <img class="r_first" src="https://design.co.kr/wp-content/uploads/2025/04/20250404_054557-1500x848.jpg"
+                alt="">
+            </div>
             <div class="title_r_text1 white">
               <h3 class="sm">행복을 디자인하는 도시,헬싱키의 리브랜딩 프로젝트</h3>
               <p class="date sm">
@@ -199,8 +263,10 @@
         </div>
         <div class="imgbox imgbox2">
           <a href="">
-            <img class="r_first"
-              src="https://design.co.kr/wp-content/uploads/2025/04/Ace-Hotel-Kyoto_Ace-Suite-1-1500x848.jpg" alt="">
+            <div class="title_img">
+              <img class="r_second"
+                src="https://design.co.kr/wp-content/uploads/2025/04/Ace-Hotel-Kyoto_Ace-Suite-1-1500x848.jpg" alt="">
+            </div>
             <div class="title_r_text2 white">
               <h3 class="sm">[위클리 디자인] 세계의 도시에서 하룻밤, 호텔이 된 역사와 디자인</h3>
               <p class="date sm">
@@ -539,53 +605,55 @@
   </section>
   <!-- 푸터 -->
   <footer>
-    <div class="wrap">
+    <div class="wrap grid">
       <div class="first">
         <address>
-          <p class="p">서울시 중구 동호로 272 (주)디자인하우스</p>
-          <p class="p">대표자. 이영혜</p>
-          <p class="p">사업자등록번호. 203-81-43529</p>
+          <p class="sm">서울시 중구 동호로 272 (주)디자인하우스</p>
+          <p class="sm">대표자. 이영혜</p>
+          <p class="sm">사업자등록번호. 203-81-43529</p>
         </address>
       </div>
       <div class="second">
         <address>
-          <p class="p">전화번호. 02-2275-6151</p>
-          <p class="p">이메일. designplus@design.co.kr</p>
+          <p class="sm">전화번호. 02-2275-6151</p>
+          <p class="sm">이메일. designplus@design.co.kr</p>
         </address>
       </div>
       <div class="third">
-        <ul class="footer_links">
-          <li><a href="">회사소개</a></li>
-          <li><a href="">서비스이용약관</a></li>
-          <li><a href="">개인정보처리방침</a></li>
-          <li><a href="">고객센터</a></li>
-          <li><a href="">정기구독</a></li>
-          <li><a href="">E 매거진</a></li>
-          <li><a href="">제휴문의</a></li>
-          <li><a href="">광고문의</a></li>
-          <li><a class="family" href="">패밀리 사이트</a></li>
+        <ul class="footer_links flex sm">
+          <li class="links"><a href="">회사소개</a></li>
+          <li class="links"><a href="">서비스이용약관</a></li>
+          <li class="links"><a href="">개인정보처리방침</a></li>
+          <li class="links"><a href="">고객센터</a></li>
+          <li class="links"><a href="">정기구독</a></li>
+          <li class="links"><a href="">E 매거진</a></li>
+          <li class="links"><a href="">제휴문의</a></li>
+          <li class="links"><a href="">광고문의</a></li>
+          <li class="links"><a class="family" href="">패밀리 사이트</a>
+            <div class="family_new sm hide">
+              <ul>
+                <li class="new"><a href=""><span>행복이 가득한 집</span></a></li>
+                <li class="new"><a href=""><span>럭셔리</span></a></li>
+                <li class="new"><a href=""><span>서울리빙디자인페어</span></a></li>
+                <li class="new"><a href=""><span>부산디자인페어</span></a></li>
+                <li class="new"><a href=""><span>서울디자인페스티벌</span></a></li>
+                <li class="new"><a href=""><span>1집구석</span></a></li>
+                <li class="new"><a href=""><span>코리아디자인페스티벌</span></a></li>
+              </ul>
+            </div>
+          </li>
         </ul>
-        <div class="family_new">
-          <ul>
-            <li><a href="">행복이 가득한 집</a></li>
-            <li><a href="">럭셔리</a></li>
-            <li><a href="">서울리빙디자인페어</a></li>
-            <li><a href="">부산디자인페어</a></li>
-            <li><a href="">서울디자인페스티벌</a></li>
-            <li><a href="">1집구석</a></li>
-            <li><a href="">코리아디자인페스티벌</a></li>
-          </ul>
-        </div>
+
       </div>
       <div class="copy">
-        <p class="p">
+        <p class="sm">
           Copyright © 2025 Designhouse<br>
           inc. All rights reserved.
         </p>
       </div>
     </div>
   </footer>
-  <!-- egjs-grid 최신 CDN -->
+  <!-- Masonry grid -->
   <script src="js/masonry.pkgd.min.js"></script>
   <script src="js/imagesloaded.pkgd.min.js"></script>
 
@@ -653,6 +721,9 @@
       $("#gallery>div").addClass("gridexpanded");
       $("#gallery").addClass("expanded");
       $("#gallery").removeClass("gallery1");
+      $(this).remove(); // 버튼만 지우고
+      $(".gallerybtn").css("height", "0").css("margin-top", "0");
+      $(".gallerybtn").removeClass("gridexpanded");
     });
 
     // 초기 카드 로딩

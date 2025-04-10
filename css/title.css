@@ -22,13 +22,25 @@
   position: relative;
 }
 
-#title .title_l img {
-  width: auto;
+#title .title_l .title_img {
+  width: 100%;
   height: 100%;
   border-radius: 20px;
   display: block;
+  overflow: hidden;
+}
+
+#title .title_l img {
+  width: 100%;
+  height: 100%;
+  display: block;
   position: relative;
   z-index: 0;
+  transition: .3s ease-in-out;
+}
+
+#title .title_l:hover img {
+  scale: 1.03;
 }
 
 #title .title_l a::before {
@@ -68,6 +80,7 @@
   position: absolute;
   bottom: 20px;
   left: 20px;
+  font-weight: 400;
 }
 
 #title .title_l time {}
@@ -106,9 +119,30 @@
   border-radius: 20px;
 }
 
-#title img.r_first {}
+#title .title_r .title_img {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  display: block;
+  overflow: hidden;
+}
 
-#title img.r_second {}
+#title .title_r img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: relative;
+  z-index: 0;
+  transition: .3s ease-in-out;
+}
+
+#title .imgbox1:hover img.r_first {
+  scale: 1.03;
+}
+
+#title .imgbox2:hover img.r_second {
+  scale: 1.03;
+}
 
 #title .wrap div.white {
   display: block;
@@ -146,13 +180,17 @@
 
 #title .title_r a h3 {
   padding: 0 20px 0 20px;
+  font-weight: 600;
 }
 
 #title .title_r .date {
   padding-left: 20px;
+
 }
 
-#title .title_r a time {}
+#title .title_r a time {
+  font-weight: 400;
+}
 
 #title hr {
   height: 1px;

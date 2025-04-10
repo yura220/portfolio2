@@ -1,37 +1,104 @@
-footer {}
+footer {
+  height: 87px;
+  position: relative;
+}
 
-footer .wrap {}
+footer .wrap {
+  height: 100%;
+  grid-template-columns: repeat(4, 1fr);
+  font-weight: 400;
+}
 
-footer .first {}
+footer .first {
+  padding: 10px;
+  border-left: 1px solid #0002;
+  border-right: 1px solid #0002;
+}
 
 footer .first address {}
 
 footer .first address p {}
 
-footer .second {}
+footer .second {
+  padding: 10px;
+  border-right: 1px solid #0002;
+}
 
 footer .second address {}
 
 footer .second address p {}
 
-footer .third {}
+footer .third {
+  padding: 10px;
+  flex-wrap: wrap;
+}
 
-footer .footer_links {}
+footer .footer_links {
+  flex-wrap: wrap;
+}
+
+footer .footer_links li.links::after {
+  content: "|";
+  margin: 0 5px;
+}
+
+footer .footer_links li:nth-child(n+8):after {
+  content: "";
+}
 
 footer .footer_links li {}
 
 footer .footer_links li a {}
 
+footer .footer_links li:nth-child(9) a {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  line-height: 2;
+}
+
 footer .footer_links li a.family {}
 
-footer .family_new {}
+footer .family_new {
+  position: absolute;
+  bottom: 35px;
+  background-color: white;
+  padding: 10px;
+  border: 1px solid #000;
+}
 
 footer .family_new ul {}
 
-footer .family_new ul li {}
+footer .family_new ul li {
+  height: 25px;
+}
 
-footer .family_new ul li a {}
+footer .family_new ul li:hover a {}
 
-footer .copy {}
+footer .family_new ul li a {
+  display: block;
+}
+
+footer .family_new ul li a span {
+  display: inline-block;
+  position: relative;
+}
+
+footer .family_new li.new a:hover span::after {
+  content: "";
+  width: 100%;
+  position: absolute;
+  height: 1px;
+  background-color: #000;
+  left: 0;
+  bottom: 2px;
+  transition: transform 0.3s ease;
+  pointer-events: none;
+}
+
+footer .copy {
+  padding: 10px;
+  border-left: 1px solid #0002;
+  border-right: 1px solid #0002;
+}
 
 footer .copy p {}
